@@ -201,7 +201,7 @@ describe Coveralls::Configuration do
     let(:circle_workflow_id) { SecureRandom.hex(4) }
 
     before do
-      allow(ENV).to receive(:[]).with('CIRCLE_BUILD_NUM').and_return(circle_workflow_id)
+      allow(ENV).to receive(:[]).with('CIRCLE_WORKFLOW_ID').and_return(circle_workflow_id)
     end
 
     it 'sets the expected parameters' do

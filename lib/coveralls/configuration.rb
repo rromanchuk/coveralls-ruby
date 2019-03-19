@@ -227,7 +227,7 @@ module Coveralls
 
       def circleci_env_hash
         {
-          circleci_build_num: ENV['CIRCLE_BUILD_NUM'],
+          circleci_build_num: ENV['CIRCLE_WORKFLOW_ID'],
           branch:             ENV['CIRCLE_BRANCH'],
           commit_sha:         ENV['CIRCLE_SHA1']
         }
