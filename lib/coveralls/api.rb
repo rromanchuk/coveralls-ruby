@@ -55,9 +55,9 @@ module Coveralls
 
           allow = WebMock::Config.instance.allow || []
           WebMock::Config.instance.allow = [*allow].push API_HOST
-        rescue StandardError => error
+        rescue StandardError => e
           # TODO: Add error action
-          puts error.message
+          puts e.message
         end
 
         begin

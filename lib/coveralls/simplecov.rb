@@ -73,8 +73,8 @@ module Coveralls
         Coveralls::Output.puts output_message result
 
         true
-      rescue StandardError => error
-        display_error error
+      rescue StandardError => e
+        display_error e
       end
 
       def display_error(error)

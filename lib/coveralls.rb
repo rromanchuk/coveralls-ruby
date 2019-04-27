@@ -44,9 +44,9 @@ module Coveralls
       begin
         require 'simplecov'
         @adapter = :simplecov if defined?(::SimpleCov)
-      rescue StandardError => error
+      rescue StandardError => e
         # TODO: Add error action
-        puts error.message
+        puts e.message
       end
     end
 
