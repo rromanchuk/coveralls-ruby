@@ -9,11 +9,6 @@ platforms :jruby do
   gem 'jruby-openssl', '~> 0.10.1'
 end
 
-platforms :rbx do
-  gem 'rubinius-developer_tools', '~> 2.0'
-  gem 'rubysl', '~> 2.2'
-end
-
 group :development do
   gem 'rake', '~> 12.3'
   gem 'rspec', '~> 3.8'
