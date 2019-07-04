@@ -26,6 +26,7 @@
 
 ### Feature Request/Enhancement
 
+- [PR #26](https://github.com/Coveralls-Community/coveralls-ruby/pull/26) Bump up SimpleCov dependency to 0.17.0 [@tagliala](https://github.com/tagliala)
 - [PR #4](https://github.com/Coveralls-Community/coveralls-ruby/pull/4) Add rubocop [@vbrazo](https://github.com/vbrazo)
 
 ## 0.7.0 (September 18, 2013)
