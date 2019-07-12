@@ -114,7 +114,7 @@ module Coveralls
       def hash_to_file(hash)
         file = nil
 
-        Tempfile.open(['coveralls-upload', 'json']) do |f|
+        Tempfile.open(%w[coveralls-upload json]) do |f|
           f.write(JSON.dump(hash))
           file = f
         end
