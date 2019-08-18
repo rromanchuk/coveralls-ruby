@@ -1,4 +1,6 @@
-require: rubocop-rspec
+require:
+  - rubocop-performance
+  - rubocop-rspec
 
 AllCops:
   TargetRubyVersion: 2.3
@@ -38,9 +40,6 @@ RSpec/ExampleLength:
   Max: 8
 
 RSpec/MultipleExpectations:
-  Enabled: false
-
-RSpec/NamedSubject:
   Enabled: false
 
 RSpec/NestedGroups:

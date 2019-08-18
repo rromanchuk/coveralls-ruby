@@ -55,9 +55,10 @@ module Coveralls
 
           allow = WebMock::Config.instance.allow || []
           WebMock::Config.instance.allow = [*allow].push API_HOST
-        rescue StandardError => error
+        rescue LoadError # rubocop:disable Lint/HandleExceptions
+        rescue StandardError => e
           # TODO: Add error action
-          puts error.message
+          puts e.message
         end
 
         begin
@@ -66,9 +67,10 @@ module Coveralls
           VCR.send(VCR.version.major < 2 ? :config : :configure) do |c|
             c.ignore_hosts API_HOST
           end
-        rescue StandardError
+        rescue LoadError # rubocop:disable Lint/HandleExceptions
+        rescue StandardError => e
           # TODO: Add error action
-          puts error.message
+          puts e.message
         end
       end
 
@@ -114,7 +116,7 @@ module Coveralls
       def hash_to_file(hash)
         file = nil
 
-        Tempfile.open(['coveralls-upload', 'json']) do |f|
+        Tempfile.open(%w[coveralls-upload json]) do |f|
           f.write(JSON.dump(hash))
           file = f
         end

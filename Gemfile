@@ -9,18 +9,14 @@ platforms :jruby do
   gem 'jruby-openssl', '~> 0.10.1'
 end
 
-platforms :rbx do
-  gem 'rubinius-developer_tools', '~> 2.0'
-  gem 'rubysl', '~> 2.2'
-end
-
 group :development do
   gem 'rake', '~> 12.3'
   gem 'rspec', '~> 3.8'
-  gem 'rubocop', '~> 0.65.0'
-  gem 'rubocop-rspec', '~> 1.32'
+  gem 'rubocop', '~> 0.73.0'
+  gem 'rubocop-performance', '~> 1.4'
+  gem 'rubocop-rspec', '~> 1.33'
   gem 'truthy', '~> 1.0'
-  gem 'vcr', '~> 4.0'
+  gem 'vcr', '~> 5.0'
   gem 'webmock', '~> 3.5'
 end
 
